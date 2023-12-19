@@ -1,0 +1,75 @@
+/* || GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+h1 {
+  padding: 80px;
+}
+
+/* || DROPDOWN */
+
+.dropdown-container {
+  max-width: 200px;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid grey;
+  background-color: whitesmoke;
+}
+
+i {
+  transition: 0.3s;
+}
+
+.rotate-icon {
+  rotate: 180deg;
+}
+
+.dropdown-menu {
+  background-color: aliceblue;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.show-menu {
+  height: 105px;
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+  padding: 8px;
+  display: block;
+  transition: 0.3s;
+}
+
+a:hover {
+  background-color: whitesmoke;
+  color: black;
+}
