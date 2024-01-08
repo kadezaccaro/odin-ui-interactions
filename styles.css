@@ -1,3 +1,14 @@
+/* || COLORS */
+
+:root {
+  --color-dark: #1e293b;
+  --color-mid: #828282;
+  --color-light: #f8fafc;
+  --color-accent: #818cf8;
+  --color-bg: #020617;
+  --color-text: #c7d2fe;
+}
+
 /* || GENERAL */
 
 * {
@@ -9,22 +20,41 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   text-align: center;
+  background-color: var(--color-bg);
+}
+
+header {
+  background-color: var(--color-accent);
+  padding: 40px;
 }
 
 main {
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-  padding: 80px;
+  color: var(--color-bg);
 }
 
-/* || DROPDOWN */
+h2 {
+  margin-bottom: 16px;
+  color: var(--color-accent);
+}
 
-.dropdown-container {
-  max-width: 200px;
+.h2-dark {
+  color: var(--color-bg);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--color-accent);
 }
 
 button {
@@ -32,14 +62,40 @@ button {
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
-  width: 100%;
   font-size: 16px;
-  border: 1px solid grey;
-  background-color: whitesmoke;
+  background-color: var(--color-dark);
+  color: var(--color-text);
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-accent);
 }
 
 i {
   transition: 0.3s;
+}
+
+/* || DROPDOWN MENU  */
+
+.dropdown-menu-section {
+  width: 100%;
+  padding: 144px 16px;
+  background-color: var(--color-bg);
+}
+
+.dropdowns-flex-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.dropdown-container {
+  max-width: 200px;
+}
+
+.menu-btn {
+  font-size: 20px;
 }
 
 .rotate-icon {
@@ -47,29 +103,141 @@ i {
 }
 
 .dropdown-menu {
-  background-color: aliceblue;
+  background-color: var(--color-dark);
   height: 0;
   overflow: hidden;
   opacity: 0;
   transition: 0.3s;
   border-radius: 4px;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .show-menu {
-  height: 105px;
+  height: 120px; /* set height of menu for animation */
   opacity: 1;
 }
 
-a {
-  text-decoration: none;
-  color: gray;
-  padding: 8px;
+.dropdown-menu a {
+  padding: 8px 16px;
   display: block;
-  transition: 0.3s;
+  font-size: 20px;
 }
 
-a:hover {
-  background-color: whitesmoke;
-  color: black;
+/* || MOBILE MENU */
+
+.mobile-menu-section {
+  background-color: var(--color-accent);
+  width: 100%;
+  padding: 144px 16px;
+}
+
+.mobile-menu-container {
+  background-color: var(--color-dark);
+  border-radius: 8px;
+  border-top: 2px solid var(--color-accent);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.nav-icons-container {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.nav-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 16px 0;
+}
+
+.nav-icon i {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.nav-icon:hover,
+.nav-icon:hover i {
+  color: var(--color-accent);
+}
+
+/* || IMAGE SLIDER */
+
+.image-slider-section {
+  width: 100%;
+  background-color: var(--color-bg);
+  padding: 144px 16px;
+}
+
+.slider-container {
+  width: 80%;
+  max-width: 1920px;
+  overflow: hidden; /* hide images that overflow off-screen */
+  white-space: nowrap; /* prevent images from wrapping */
+  font-size: 0; /* remove white space between inline-block elements */
+  position: relative;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+.slide {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: 0.6s;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  margin-top: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-bg);
+  padding: 8px;
+  border-radius: 4px;
+  opacity: 0.75;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-light);
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--color-mid);
+}
+
+.arrows-container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 24px;
+}
+
+.arrow-btn {
+  cursor: pointer;
+  background-color: var(--color-bg);
+  color: var(--color-light);
+  border: none;
+  font-size: 24px;
+  padding: 16px;
+  transition: 0.3s;
+  opacity: 0.75;
 }

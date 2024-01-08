@@ -12,44 +12,124 @@
     />
   </head>
   <body>
-    <h1>Odin UI Interactions</h1>
+    <header>
+      <h1>Odin UI Interactions</h1>
+    </header>
 
     <main>
-      <div class="dropdown-container">
-        <button class="menu-btn" onclick="toggleDropdown('dropdown-1')">
-          Menu
-          <i id="down-icon" class="fa-solid fa-angle-down"></i>
-        </button>
-        <div id="dropdown-1" class="dropdown-menu">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </div>
+      <section class="dropdown-menu-section">
+        <h2>Drop-down Menus</h2>
 
-      <div class="dropdown-container">
-        <button class="menu-btn" onclick="toggleDropdown('dropdown-2')">
-          Menu
-          <i id="down-icon" class="fa-solid fa-angle-down"></i>
-        </button>
-        <div id="dropdown-2" class="dropdown-menu">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </div>
+        <div class="dropdowns-flex-container">
+          <div class="dropdown-container">
+            <button class="menu-btn" onclick="toggleDropdown('dropdown-1')">
+              Menu
+              <i id="down-icon" class="fa-solid fa-angle-down"></i>
+            </button>
+            <div id="dropdown-1" class="dropdown-menu">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
 
-      <div class="dropdown-container">
-        <button class="menu-btn" onclick="toggleDropdown('dropdown-3')">
-          Menu
-          <i id="down-icon" class="fa-solid fa-angle-down"></i>
-        </button>
-        <div id="dropdown-3" class="dropdown-menu">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <div class="dropdown-container">
+            <button class="menu-btn" onclick="toggleDropdown('dropdown-2')">
+              Menu
+              <i id="down-icon" class="fa-solid fa-angle-down"></i>
+            </button>
+            <div id="dropdown-2" class="dropdown-menu">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+
+          <div class="dropdown-container">
+            <button class="menu-btn" onclick="toggleDropdown('dropdown-3')">
+              Menu
+              <i id="down-icon" class="fa-solid fa-angle-down"></i>
+            </button>
+            <div id="dropdown-3" class="dropdown-menu">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section class="mobile-menu-section">
+        <h2 class="h2-dark">Mobile Menu</h2>
+
+        <nav class="mobile-menu-container">
+          <div class="nav-icons-container">
+            <a href="#" class="nav-icon">
+              <i class="fa-solid fa-home"></i>
+              <span>Home</span>
+            </a>
+            <a href="#" class="nav-icon">
+              <i class="fa-solid fa-user"></i>
+              <span>Profile</span>
+            </a>
+            <a href="#" class="nav-icon">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Messages</span>
+            </a>
+            <a href="#" class="nav-icon">
+              <i class="fa-solid fa-bell"></i>
+              <span>Notifications</span>
+            </a>
+            <a href="#" class="nav-icon">
+              <i class="fa-solid fa-cog"></i>
+              <span>Settings</span>
+            </a>
+          </div>
+        </nav>
+      </section>
+
+      <section class="image-slider-section">
+        <h2>Image Slider</h2>
+
+        <div class="slider-container">
+          <img
+            class="slide"
+            src="https://picsum.photos/id/26/1920/1080"
+            alt=""
+          />
+          <img
+            class="slide"
+            src="https://picsum.photos/id/27/1920/1080"
+            alt=""
+          />
+          <img
+            class="slide"
+            src="https://picsum.photos/id/28/1920/1080"
+            alt=""
+          />
+          <img
+            class="slide"
+            src="https://picsum.photos/id/29/1920/1080"
+            alt=""
+          />
+
+          <div class="dots-container">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+
+          <div class="arrows-container">
+            <button class="arrow-btn arrow-left">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="arrow-btn arrow-right">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="app.js"></script>
