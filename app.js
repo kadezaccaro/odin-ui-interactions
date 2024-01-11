@@ -13,6 +13,34 @@ function toggleDropdown(dropdownId) {
   }
 }
 
+// ******** MOBILE MENU ********
+
+const navBtn = document.querySelector(".nav-btn");
+const navLinkContainer = document.querySelector(".nav-links-container");
+const navIcons = document.querySelectorAll(".nav-link");
+
+navBtn.addEventListener("click", () => {
+  navLinkContainer.classList.add("show-nav");
+
+  navIcons.forEach((icon) => {
+    icon.classList.add("show-nav");
+  });
+
+  navBtn.classList.add("hide-nav-btn");
+});
+
+navIcons.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    navLinkContainer.classList.remove("show-nav");
+
+    navIcons.forEach((icon) => {
+      icon.classList.remove("show-nav");
+    });
+
+    navBtn.classList.remove("hide-nav-btn");
+  });
+});
+
 // ******** IMAGE SLIDER ********
 
 const sliderDots = document.querySelectorAll(".dot");
