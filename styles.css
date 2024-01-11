@@ -26,7 +26,7 @@ body {
 
 header {
   background-color: var(--color-dark);
-  padding: 32px;
+  padding: 2rem;
 }
 
 main {
@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   color: var(--color-heading);
 }
 
@@ -55,10 +55,10 @@ a:hover {
 
 button {
   cursor: pointer;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 0.25rem;
+  font-size: 1rem;
   background-color: var(--color-dark);
   color: var(--color-text);
   transition: 0.3s;
@@ -75,21 +75,21 @@ i {
 /* || DROPDOWN MENU  */
 
 .dropdown-menu-section {
-  padding: 144px 16px;
+  padding: 9rem 1rem;
 }
 
 .dropdowns-flex-container {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .dropdown-container {
-  max-width: 200px;
+  max-width: 12.5rem;
 }
 
 .menu-btn {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .rotate-icon {
@@ -102,25 +102,25 @@ i {
   overflow: hidden;
   opacity: 0;
   transition: 0.3s;
-  border-radius: 4px;
-  margin-top: 8px;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
 }
 
 .show-menu {
-  height: 120px; /* set height of menu for animation */
+  height: 7.5rem; /* set height of menu for animation */
   opacity: 1;
 }
 
 .dropdown-menu a {
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   display: block;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 /* || MOBILE MENU */
 
 .mobile-menu-section {
-  padding: 144px 16px;
+  padding: 9rem 1rem;
 }
 
 .nav-btn {
@@ -147,8 +147,8 @@ i {
 .nav-icon-container {
   border-radius: 50%;
   background-color: var(--color-dark);
-  height: 64px;
-  width: 64px;
+  height: 4rem;
+  width: 4rem;
   position: relative;
 }
 
@@ -157,13 +157,13 @@ i {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24px;
+  font-size: 1.5rem;
   color: var(--color-text);
 }
 
 .nav-container {
   margin: 0 auto;
-  max-width: 520px;
+  max-width: 32.5rem;
   position: relative;
   display: flex;
   justify-content: center;
@@ -178,7 +178,7 @@ i {
 
 .nav-links-container {
   background-color: var(--color-dark);
-  border-radius: 260px;
+  border-radius: 16.25rem;
   display: flex;
   justify-content: space-evenly;
   font-weight: bold;
@@ -191,7 +191,7 @@ i {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  padding: 16px 0;
+  padding: 1rem 0;
   opacity: 0;
   visibility: hidden;
 }
@@ -202,33 +202,33 @@ i {
 }
 
 .nav-link i {
-  font-size: 24px;
-  margin-bottom: 8px;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
   color: var(--color-text);
 }
 
 .nav-link:hover,
 .nav-link:hover i {
   color: var(--color-light);
-  transform: translateY(-2px);
+  transform: translateY(-0.125rem);
 }
 
 /* || IMAGE SLIDER */
 
 .image-slider-section {
-  padding: 144px 16px;
+  padding: 9rem 1rem;
 }
 
 .slider-container {
-  width: 80%;
-  max-width: 1920px;
+  width: 100%;
+  max-width: 120rem;
   overflow: hidden; /* hide images that overflow off-screen */
   white-space: nowrap; /* prevent images from wrapping */
   font-size: 0; /* remove white space between inline-block elements */
   position: relative;
   margin: 0 auto;
-  border-radius: 16px;
-  border: 8px solid var(--color-dark);
+  border-radius: 1rem;
+  border: 0.5rem solid var(--color-dark);
 }
 
 .slide {
@@ -242,25 +242,25 @@ i {
 .dots-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 24px;
-  margin-top: 8px;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
   position: absolute;
   z-index: 1;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-bg);
-  padding: 8px;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
   opacity: 0.75;
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: var(--color-light);
-  margin: 0 4px;
+  margin: 0 0.25rem;
   cursor: pointer;
 }
 
@@ -276,7 +276,7 @@ i {
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  padding: 24px;
+  padding: 1.5rem;
 }
 
 .arrow-btn {
@@ -284,8 +284,16 @@ i {
   background-color: var(--color-bg);
   color: var(--color-light);
   border: none;
-  font-size: 24px;
-  padding: 16px;
+  font-size: 1.5rem;
+  padding: 1rem;
   transition: 0.3s;
   opacity: 0.75;
+}
+
+/* || MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
 }
