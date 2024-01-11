@@ -62,6 +62,8 @@ function startSlider() {
   }, 5000);
 }
 
+startSlider();
+
 function moveSlider(index) {
   slides.forEach((slide) => {
     slide.style.transform = `translateX(-${index * 100}%)`;
@@ -76,10 +78,6 @@ function activateSliderDots(index) {
   sliderDots[index].classList.add("active");
 }
 
-function stopSlider() {
-  clearInterval(intervalId);
-}
-
 // manually move slider via dots
 
 sliderDots.forEach((dot, index) => {
@@ -89,7 +87,11 @@ sliderDots.forEach((dot, index) => {
   });
 });
 
-// anually move slider via arrows
+function stopSlider() {
+  clearInterval(intervalId);
+}
+
+// manually move slider via arrows
 
 const arrowLeft = document.querySelector(".arrow-left");
 const arrowRight = document.querySelector(".arrow-right");
@@ -113,5 +115,3 @@ arrowRight.addEventListener("click", () => {
   }
   moveSlider(currentSlide);
 });
-
-startSlider();
